@@ -2,7 +2,7 @@
 ---
 **Name:** Vibusha Vadivel 
 **PID:** A17825728
-**Email:** [vvadivel@ucsd.edu] (vvadivel@ucsd.edu)
+**Email:** [Link] (vvadivel@ucsd.edu)
 ---
 
 ## `cd` command
