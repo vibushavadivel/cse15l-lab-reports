@@ -1,8 +1,8 @@
 # Lab Report 1
 ---
-**Name:** Vibusha Vadivel 
-**PID:** A17825728
-**Email:** vvadivel@ucsd.edu
+<p> **Name: Vibusha Vadivel <br>
+PID:A17825728 <br>
+Email: vvadivel@ucsd.edu** </p>
 ---
 
 ## `cd` command
