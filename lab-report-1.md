@@ -18,7 +18,7 @@
 3. **Command:** `[user@sahara ~]$ cd lecture1` <br>
    **Output:** Nothing
 
-   **Working directory:** `/home/ <br>
+   **Working directory:** `/home/` <br>
    **Explanation:** I passed `lecture1` as an argument to the `cd` command. This directed `cd` to move into the directory and so the file path changed to add `lecture1`. `cd` also does not print any output. <br>
    **Error**? No
 
