@@ -62,7 +62,7 @@
    For example:
    ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/5c091e85-55b8-4e25-87ee-8c1475854897)
 
-   **Error?** No
+   **Error?** Yes, this is an error because the terminal does not inform the user that the arguments being inputted are invalid, nor does it tell them how to exit out of this never ending loop. Ideally the cat command should print an error message after no arguments have been passed in, requesting the user to pass in a valid file path.
 
 3. **Command:** `[user@sahara ~lecture1]$ cat messages` <br>
    **Output:** `cat: messages: Is a directory`
