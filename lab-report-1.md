@@ -11,17 +11,18 @@
    **Output:** Nothing
 
    **Working directory:** `/home` <br>
-   **Explanation:** This was the first command I entered and since I had passed in no argments I had not moved into any directory. In order to move into a directory, `cd` needs the name of that directory passed into as as argument. `cd` also does not print any output. 
+   **Explanation:** This was the first command I entered and since I had passed in no argments I had not moved into any directory. In order to move into a directory, `cd` needs the name of that directory passed into as as argument. `cd` also does not print any output. If I had already moved into a directory, `cd` would still not print any output. However the resulting directory after a `cd` command with no arguments would be the home directory.
+   
    **Error?** No
 
-2. **Command:** `[user@sahara ~]$ cd lecture1` <br>
+3. **Command:** `[user@sahara ~]$ cd lecture1` <br>
    **Output:** Nothing
 
-   **Working directory:** `/home/lecture1` <br>
+   **Working directory:** `/home/ <br>
    **Explanation:** I passed `lecture1` as an argument to the `cd` command. This directed `cd` to move into the directory and so the file path changed to add `lecture1`. `cd` also does not print any output. <br>
    **Error**? No
 
-3. **Command:** `[user@sahara ~/lecture1]$ cd messages/zh-cn.txt` <br>
+4. **Command:** `[user@sahara ~/lecture1]$ cd messages/zh-cn.txt` <br>
    **Output:** `bash: cd: messages/zh-cn.txt: Not a directory`
 
    **Working directory:** `/home/lecture1` <br>
@@ -57,17 +58,20 @@
    **Output:** `                     ` 
 
    **Working directory:** `/home/lecture1` <br>
-   **Explanation:** The command `cat` expects an argument. It does not accept null arguments, so the terminal will not provide the next command line until an argument has been provided or `Ctrl + C` is used to quit. <br>
-   **Error?** Yes
+   **Explanation:** The command `cat` expects an argument. It does not accept null arguments, so the terminal will not provide the next command line until an argument has been provided or `Ctrl + C` is used to quit. Whatever is typed into the terminal after the command `cat` has been typed, will be printed out twice, until `Ctrl + C` is used to quit. <br>
+   For example:
+   ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/5c091e85-55b8-4e25-87ee-8c1475854897)
 
-2. **Command:** `[user@sahara ~lecture1]$ cat messages` <br>
+   **Error?** No
+
+3. **Command:** `[user@sahara ~lecture1]$ cat messages` <br>
    **Output:** `cat: messages: Is a directory`
 
    **Working directory:** `/home/lecture1` <br>
    **Explanation:** Ihe command `cat` only takes file path as arguments. Here the argument was `messages` which is a directory and so the `cat` command cannot print out the content of a directory unless each file path is explicitly passed in as arguments. Therefore, the error message warns the user that they passed in a directory and not a file path.  
    **Error**? Yes
 
-3. **Command:** `[user@sahara ~lecture1]$ cat Hello.Java` <br>
+4. **Command:** `[user@sahara ~lecture1]$ cat Hello.Java` <br>
    **Output:** <br>
 
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/2ab113f0-b744-4646-9ee1-aca19ef41769)
