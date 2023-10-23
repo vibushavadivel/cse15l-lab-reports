@@ -58,11 +58,11 @@
    **Output:** `                     ` 
 
    **Working directory:** `/home/lecture1` <br>
-   **Explanation:** The command `cat` expects an argument. It does not accept null arguments, so the terminal will not provide the next command line until an argument has been provided or `Ctrl + C` is used to quit. Whatever is typed into the terminal after the command `cat` has been typed, will be printed out twice, until `Ctrl + C` is used to quit. <br>
+   **Explanation:** The command `cat` expects a valid file path as an argument. Whatever is typed into the terminal after the command `cat` (with no arguments), will be printed out twice, until `Ctrl + C` is used to quit. `Ctrl + C` allows the next command line to be displayed. <br>
    For example:
    ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/5c091e85-55b8-4e25-87ee-8c1475854897)
 
-   **Error?** Yes, this is an error because the terminal does not inform the user that the arguments being inputted are invalid, nor does it tell them how to exit out of this never ending loop. Ideally the cat command should print an error message after no arguments have been passed in, requesting the user to pass in a valid file path.
+   **Error?** Yes, this is an error because the terminal does not inform the user that the arguments being inputted are invalid, nor does it tell them how to exit out of this never ending loop. Ideally the `cat` command should print an error message after no arguments have been passed in, requesting the user to pass in a valid file path.
 
 3. **Command:** `[user@sahara ~lecture1]$ cat messages` <br>
    **Output:** `cat: messages: Is a directory`
