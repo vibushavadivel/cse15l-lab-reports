@@ -34,16 +34,16 @@ What are the relevant arguments to those methods, and the values of any relevant
 StringServer main method:
 - String[].length --> args.length: no arguments
 - System.out.println(String:"Missing port number! Try any number between 1024 to 49151")
-- Integer.parseInt(String: args[0])
+- Integer.parseInt(String: args[0] = 4000)
 - Server.start(int: port, URLHandler: new Handler())
 
 StringServer handleRequest methodt:
 - URI.getPath().equals() --> url.getPath().equals(String: "/")
-- StringBuilder.toString() --> output.toString()
+- StringBuilder.toString() --> output.toString(): no arguments
 - URI.getPath().contains() --> url.getPath().contains(String: "/add-message")
 - URL.getQuery().split --> url.getQuery().split(String: "=")
 - String.equals() --> parameters[0].equals(String: "s")
-- StringBuilder.append() --> output.append(String sequence: "(myInt)+ ". " + parameters[1] + "\n"")
+- StringBuilder.append() --> output.append(String sequence: "(myInt)+ ". " + parameters[1] + "\n"" = "1. Hi\n")
 - StringBuilder.toString() --> output.toString(): no arguments
 
 Relevant fields: 
@@ -51,13 +51,41 @@ Relevant fields:
 - StringBuilder output = new StrongBuilder()
 
 How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
-By values, we mean specific Strings, ints, URIs, and so on. "abc" is a value, 456 is a value, new URI("http://...") is a value, and so on.)
+
+Relevant fields that got changed: 
+- int myInt = 2
+_Every time something is appended to the StringBuilder output, myInt increases by 1 to keep track of which number the messages is on the output list. Since it was initially 1, it will increment to 2, so that the next message inputted will be the second on the list._
+
+- StringBuilder output = "1. Hi\n"
+__String Builder output stores all of the inputted messages and displays it. Since only 1 message has been inputted, it stores that one._
 
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/7d98fe96-61a6-4f10-8d73-1a72e36eb338) <br>
-Which methods in your code are called?
-What are the relevant arguments to those methods, and the values of any relevant fields of the class?
+StringServer main method:
+- String[].length --> args.length: no arguments
+- System.out.println(String:"Missing port number! Try any number between 1024 to 49151")
+- Integer.parseInt(String: args[0] = 4000)
+- Server.start(int: port, URLHandler: new Handler())
+
+StringServer handleRequest methodt:
+- URI.getPath().equals() --> url.getPath().equals(String: "/")
+- StringBuilder.toString() --> output.toString(): no arguments
+- URI.getPath().contains() --> url.getPath().contains(String: "/add-message")
+- URL.getQuery().split --> url.getQuery().split(String: "=")
+- String.equals() --> parameters[0].equals(String: "s")
+- StringBuilder.append() --> output.append(String sequence: "(myInt)+ ". " + parameters[1] + "\n"" = "2. Hello World\n")
+- StringBuilder.toString() --> output.toString(): no arguments
+
+Relevant fields: 
+- int myInt = 3
+- StringBuilder output = "1. Hi\n 2. Hello World\n"
+
 How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
-By values, we mean specific Strings, ints, URIs, and so on. "abc" is a value, 456 is a value, new URI("http://...") is a value, and so on.)
+
+Relevant fields that got changed: 
+- int myInt = 2
+ _Every time something is appended to the StringBuilder output, myInt increases by 1 to keep track of which number the messages is on the output list. Since it was 2, it will increment to 3, so that the next message inputted will be the third on the list._
+
+- StringBuilder output = "1. Hi\n"
 
 ---
 ## Part 2
