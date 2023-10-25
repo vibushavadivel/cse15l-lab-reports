@@ -16,11 +16,40 @@
 
 _Which methods in your code are called? <br>_
 StringServer main method:
-- args.Length
-- System.out.println
-- Integer.parseInt
+- String[].length --> args.length
+- System.out.println()
+- Integer.parseInt()
+- Server.start()
+
+StringServer handleRequest methodt:
+- URI.getPath().equals() --> url.getPath().equals()
+- StringBuilder.toString() --> output.toString()
+- URI.getPath().contains() --> url.getPath().contains()
+- URL.getQuery().split --> url.getQuery().split()
+- String.equals() --> parameters[0].equals()
+- StringBuilder.append() --> output.append()
+- StringBuilder.toString() --> output.toString()
 
 What are the relevant arguments to those methods, and the values of any relevant fields of the class?
+StringServer main method:
+- String[].length --> args.length: no arguments
+- System.out.println(String:"Missing port number! Try any number between 1024 to 49151")
+- Integer.parseInt(String: args[0])
+- Server.start(int: port, URLHandler: new Handler())
+
+StringServer handleRequest methodt:
+- URI.getPath().equals() --> url.getPath().equals(String: "/")
+- StringBuilder.toString() --> output.toString()
+- URI.getPath().contains() --> url.getPath().contains(String: "/add-message")
+- URL.getQuery().split --> url.getQuery().split(String: "=")
+- String.equals() --> parameters[0].equals(String: "s")
+- StringBuilder.append() --> output.append(String sequence: "(myInt)+ ". " + parameters[1] + "\n"")
+- StringBuilder.toString() --> output.toString(): no arguments
+
+Relevant fields: 
+- int myInt = 1
+- StringBuilder output = new StrongBuilder()
+
 How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
 By values, we mean specific Strings, ints, URIs, and so on. "abc" is a value, 456 is a value, new URI("http://...") is a value, and so on.)
 
