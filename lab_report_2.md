@@ -94,7 +94,7 @@ Relevant fields that got changed:
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/52a63f24-62e9-4191-88f5-01ecf0c40893)
 
 ### Path to my public key for your SSH key:
-![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/992c0532-ba78-4a2d-960d-b5e0c0e95a8c)
+![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/c5bf392c-8b38-47a1-b169-d9557c18859e)
 
 ### Logging into my ieng6 through the terminal without being asked for a password:
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/802c4090-13c7-4ed1-a8d5-cf206b94e644)
