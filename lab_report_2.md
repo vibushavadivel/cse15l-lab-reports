@@ -8,7 +8,6 @@
 ## Part 1
 
 ### String Server Code: 
-
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/8c87549b-92e7-4435-85a5-24304ad3dfd1)
 
 ### Output after `/add-message?s=Hi` command: 
