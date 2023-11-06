@@ -13,7 +13,7 @@
 ### Output after `/add-message?s=Hi` command: 
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/57dc3c4a-9ad6-43bb-a606-d33a472f7ad3) <br>
 
-#### Which methods in your code are called? <br>
+#### Which methods in your code are called?
 **StringServer main method:**
 - String[].length --> args.length
 - System.out.println()
@@ -60,7 +60,7 @@ __String Builder output stores all of the inputted messages and displays it. Sin
 ### Output after `/add-message?s=Hello%20World` command: 
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/7d98fe96-61a6-4f10-8d73-1a72e36eb338) <br>
 
-#### Which methods in your code are called? <br>
+#### Which methods in your code are called?
 **StringServer main method:**
 - String[].length --> args.length
 - System.out.println()
