@@ -14,7 +14,7 @@
 ### Output after `/add-message` command: 
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/57dc3c4a-9ad6-43bb-a606-d33a472f7ad3) <br>
 
-_Which methods in your code are called? <br>_
+Which methods in your code are called? <br>
 StringServer main method:
 - String[].length --> args.length
 - System.out.println()
@@ -33,31 +33,29 @@ StringServer handleRequest methodt:
 What are the relevant arguments to those methods, and the values of any relevant fields of the class?
 StringServer main method:
 - String[].length --> args.length: no arguments
-- System.out.println(String:"Missing port number! Try any number between 1024 to 49151")
-- Integer.parseInt(String: args[0] = 4000)
-- Server.start(int: port, URLHandler: new Handler())
+- System.out.println(String: `"Missing port number! Try any number between 1024 to 49151"`)
+- Integer.parseInt(String: args[0] = `4000`)
+- Server.start(int: `port`, URLHandler: `new Handler()`)
 
 StringServer handleRequest methodt:
-- URI.getPath().equals() --> url.getPath().equals(String: "/")
+- URI.getPath().equals() --> url.getPath().equals(String: `"/"`)
 - StringBuilder.toString() --> output.toString(): no arguments
-- URI.getPath().contains() --> url.getPath().contains(String: "/add-message")
-- URL.getQuery().split --> url.getQuery().split(String: "=")
-- String.equals() --> parameters[0].equals(String: "s")
-- StringBuilder.append() --> output.append(String sequence: "(myInt)+ ". " + parameters[1] + "\n"" = "1. Hi\n")
+- URI.getPath().contains() --> url.getPath().contains(String: `"/add-message"`)
+- URL.getQuery().split --> url.getQuery().split(String: `"="`)
+- String.equals() --> parameters[0].equals(String: `"s"`)
+- StringBuilder.append() --> output.append(String sequence: "(int: `myInt`)+ ". " + String: `parameters[1]` + "\n"" = `1. Hi\n`)
 - StringBuilder.toString() --> output.toString(): no arguments
 
 Relevant fields: 
-- int myInt = 1
-- StringBuilder output = new StrongBuilder()
-
-How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
+- int myInt = 1 
+- StringBuilder output = new StringBuilder()
 
 Relevant fields that got changed: 
 - int myInt = 2
-_Every time something is appended to the StringBuilder output, myInt increases by 1 to keep track of which number the messages is on the output list. Since it was initially 1, it will increment to 2, so that the next message inputted will be the second on the list._
+_Every time something is appended to the StringBuilder output, `myInt` increases by 1 to keep track of which number the messages is on the output list. `myInt` gets incremented in the handleRequest function everytime the url is entered followed by `/add-message` in a browser or using the curl command. Since it was initially 1, it will increment to 2, so that the next message inputted will be the second on the list._
 
 - StringBuilder output = "1. Hi\n"
-__String Builder output stores all of the inputted messages and displays it. Since only 1 message has been inputted, it stores that one._
+__String Builder output stores all of the inputted messages and displays it. Since only 1 message has been inputted, it stores the current value of `myInt` (1) followed by a period, the entered message (`parameters[1]`) and a newline character at the end of the current string stored in it (orginally null)._
 
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/7d98fe96-61a6-4f10-8d73-1a72e36eb338) <br>
 StringServer main method:
