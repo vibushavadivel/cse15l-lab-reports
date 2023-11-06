@@ -30,7 +30,7 @@
 - StringBuilder.append() --> output.append()
 - StringBuilder.toString() --> output.toString()
 
-##### What are the relevant arguments to those methods, and the values of any relevant fields of the class?
+#### What are the relevant arguments to those methods, and the values of any relevant fields of the class?
 **StringServer main method:**
 - String[].length --> args.length: no arguments
 - System.out.println(String: `"Missing port number! Try any number between 1024 to 49151"`)
@@ -46,7 +46,7 @@
 - StringBuilder.append() --> output.append(String: "(int: `myInt`= `1`)+ ". " + String: `parameters[1]` = `"Hi"` + "\n"") = `1. Hi\n`
 - StringBuilder.toString() --> output.toString(): no arguments
 
-##### How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
+#### How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
 **Values of relevant fields:**
 - int myInt = 1 
 - StringBuilder output = new StringBuilder()
@@ -61,7 +61,7 @@ __String Builder output stores all of the inputted messages and displays it. Sin
 ### Output after `/add-message?s=Hello%20World` command: 
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/7d98fe96-61a6-4f10-8d73-1a72e36eb338) <br>
 
-##### Which methods in your code are called? <br>
+#### Which methods in your code are called? <br>
 **StringServer main method:**
 - String[].length --> args.length
 - System.out.println()
@@ -77,7 +77,7 @@ __String Builder output stores all of the inputted messages and displays it. Sin
 - StringBuilder.append() --> output.append()
 - StringBuilder.toString() --> output.toString()
 
-##### What are the relevant arguments to those methods, and the values of any relevant fields of the class?
+#### What are the relevant arguments to those methods, and the values of any relevant fields of the class?
 **StringServer main method:**
 - String[].length --> args.length: no arguments
 - System.out.println(String: `"Missing port number! Try any number between 1024 to 49151"`)
@@ -93,7 +93,7 @@ __String Builder output stores all of the inputted messages and displays it. Sin
 - StringBuilder.append() --> output.append(String sequence: "(int: `myInt`= `2`)+ ". " + String: `parameters[1]` = `"Hello World"` + "\n"") = `2. Hello World\n`
 - StringBuilder.toString() --> output.toString(): no arguments
 
-##### How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
+#### How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
 
 **Original values of relevant fields:**
 - int myInt = 3
@@ -122,6 +122,6 @@ __String Builder output stores all of the inputted messages and displays it. Sin
 
 ---
 ## Part 3
-##### Week 2 and 3 Reflection
+#### Week 2 and 3 Reflection
 This was the first time I had ever connected to a remote server before. So learning about my RSA IDs and port numbers was very unfamiliar but really interesting to learn becasue it helped me contextualize how web servers worked and how remote computers interacted with each other. It was also the first time I explored the concept of servers and so understanding how a server processes a URL was very helpful becuase it reduced my intimidation and fear towards working with servers.  Although I know that the Server.java code is far more simplifed than any server applications I interact with on a daily basis, it helped me understand on a fundamental what information is needed to build a server. It also exposed me to how a server breaks down a url and how it can pass the seperate parts of that url as arguments for different methods.
 
