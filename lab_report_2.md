@@ -14,7 +14,7 @@
 ### Output after `/add-message?s=Hi` command: 
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/57dc3c4a-9ad6-43bb-a606-d33a472f7ad3) <br>
 
-##### Which methods in your code are called? <br>
+#### Which methods in your code are called? <br>
 **StringServer main method:**
 - String[].length --> args.length
 - System.out.println()
