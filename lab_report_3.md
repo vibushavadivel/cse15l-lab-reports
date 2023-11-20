@@ -31,25 +31,25 @@
 
 **The Buggy Code Before:**
 ```
-   static int[] reversed(int[] arr) {
-       int[] newArray = new int[arr.length];
-       for(int i = 0; i < arr.length; i += 1) {
-         arr[i] = newArray[arr.length - i - 1];
-       }
-       return arr;
-     }
+static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = newArray[arr.length - i - 1];
+    }
+    return arr;
+}
 ```
 **The Buggy Code After (Fixed):**
 ```
-   static int[] reversed(int[] arr) {
-       int[] newArray = new int[arr.length];
-       for(int i = 0; i < arr.length; i += 1) {
-         newArray[i] = arr[arr.length - i - 1];
-       }
-       return newArray;
-     }
- ```
-Description: 
+static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      newArray[i] = arr[arr.length - i - 1];
+    }
+    return newArray;
+}
+```
+Description: The bug was in the third line of the body of the method. Instead of assigning the value of the input array, the buggy code assigned the values of the new initialized array filled with 0 values to the old array (newArray). It then returned the original input array (arr), now containing the 0 values of newArray. Instead I switched the assignement so that the empty new initialized array, newArray, would be assigned the values of the input array in reverse order (arr.length - 1 - i). I also changed it so that the method returned newArray, so that the return value was actually updated with the values in reverse order.
 
 ## Part 2 - `grep`
 Consider the commands less, find, and grep. Choose one of them. Online, find 4 interesting command-line options or alternate ways to use the command you chose. To find information about the commands, a simple Web search like “find command-line options” will probably give decent results. There is also a built-in command on many systems called man (short for “manual”) that displays information about commands; you can use man grep, for example, to see a long listing of information about how grep works. Also consider asking ChatGPT!
