@@ -52,12 +52,6 @@ static int[] reversed(int[] arr) {
 **Description**: The bug was in the third line of the body of the method. Instead of assigning the value of the input array, the buggy code assigned the values of the new initialized array filled with 0 values to the old array (newArray). It then returned the original input array (arr), now containing the 0 values of newArray. Instead I switched the assignement so that the empty new initialized array, newArray, would be assigned the values of the input array in reverse order (arr.length - 1 - i). I also changed it so that the method returned newArray, so that the return value was actually updated with the values in reverse order.
 
 ## Part 2 - `grep`
-Consider the commands less, find, and grep. Choose one of them. Online, find 4 interesting command-line options or alternate ways to use the command you chose. To find information about the commands, a simple Web search like “find command-line options” will probably give decent results. There is also a built-in command on many systems called man (short for “manual”) that displays information about commands; you can use man grep, for example, to see a long listing of information about how grep works. Also consider asking ChatGPT!
-
-For example, we saw the -name option for find in class. For each of those options, give 2 examples of using it on files and directories from ./technical. Show each example as a code block that shows the command and its output, and write a sentence or two about what it’s doing and why it’s useful.
-
-That makes 8 total examples, all focused on a single command. There should be two examples each for four different command-line options. Many commands like these have pretty sophisticated behavior possible – it can take years to be exposed to and learn all of the possible tricks and inner workings.
-
 ### -v or --invert-match
 **Example 1:**
 ```
