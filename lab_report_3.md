@@ -61,57 +61,55 @@ That makes 8 total examples, all focused on a single command. There should be tw
 ### -v or --invert-match
 **Example 1:**
 ```
-$ grep -v "}" Server.java
-// A simple web server using Java's built-in HttpServer
+$ grep -v "A Perk of Age: Free Legal Advice" ./technical/government/Media/A_Perk_of_Age.txt
 
-// Examples from https://dzone.com/articles/simple-http-server-in-java were useful references
 
-import java.io.IOException;
-import java.io.OutputStream;
-import java.net.InetSocketAddress;
-import java.net.InetAddress;
-import java.net.URI;
 
-import com.sun.net.httpserver.HttpExchange;
-import com.sun.net.httpserver.HttpHandler;
-import com.sun.net.httpserver.HttpServer;
 
-interface URLHandler {
-    String handleRequest(URI url) throws IOException;
 
-class ServerHttpHandler implements HttpHandler {
-    URLHandler handler;
-    ServerHttpHandler(URLHandler handler) {
-      this.handler = handler;
-    public void handle(final HttpExchange exchange) throws IOException {
-        // form return body after being handled by program
-        try {
-            String ret = handler.handleRequest(exchange.getRequestURI());
-            // form the return string and write it on the browser
-            exchange.sendResponseHeaders(200, ret.getBytes().length);
-            OutputStream os = exchange.getResponseBody();
-            os.write(ret.getBytes());
-            os.close();
-            String response = e.toString();
-            exchange.sendResponseHeaders(500, response.getBytes().length);
-            OutputStream os = exchange.getResponseBody();
-            os.write(response.getBytes());
-            os.close();
+By Kelly Greene
+Free Legal advice is only a phone call away - and the hot lines
+that provide it are expanding their services.
+It's a little known perk available to anyone 60 or older: 21
+states, Washington D.C., and Puerto Rico operate legal-assistance
+hot lines for older adults and most take calls from younger
+caregivers as well. Volunteers offer advice on legal questions,
+provide self-help materials, and make referrals to legal aid
+offices and pro bono or reduced-fee private lawyers. Even if you
+live in a state without a hot line, local agencies on aging will
+provide you with referrals to nearby lawyers. The hot lines and
+referral services tackle estate planning, pension, and health
+benefits, elder abuse and neglect, guardianship custodial issues
+involving grandchildren, consumer protection and other elder-law
+issues.
+The U.S. administration on Aging coordinates this loosely knit
+legal-services network. Anyone who meets the age requirement can
+call the hot line, but hands-on legal counsel goes first to people
+with the greatest financial or social needs. The federal Agency
+recently awarded $2 million in grants to improve elder-law
+services, with the largest part being used to bolster 12 hotlines
+around the country, some of which are adding Web-based
+questionnaires and outreach projects in rural areas and for older
+people who don't speak English.
+For a list of where the hotlines operate, along with their phone
+numbers and hours, go to www.aoa.gov/legal/hotline.html, or call
+the federal Eldercare Locator at 800-677-1116. If you live in a
+state without a hot line, the locator can point you to local legal
+assistance.
+Another source of low-cost help also expanded this year: AARP's
+Legal Services Network is now available in 46 states and expects to
+reach all 50 by the end of March. You have to pay the group's dues
+($10 a year) to use the services; after that you get 30 minutes of
+legal counseling, either face-to-face or by phone, at no cost.
+Lawyers discount their usual rate by 20% after that. Simple wills
+cost $75 apiece. You can reach the service at 800-424-3410 or go to
+www.aarp.org/LSN to find a lawyer nearby.
 
-public class Server {
-    public static void start(int port, URLHandler handler) throws IOException {
-        HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
 
-        //create request entrypoint
-        server.createContext("/", new ServerHttpHandler(handler));
 
-        //start the server
-        server.start();
-        System.out.println("Server started at http://" + InetAddress.getLocalHost().getHostName() + ":" + port);
-        System.out.println("(Or, if it's running locally on this computer, use http://localhost:" + port + " )");
 ```
 
-Explanation: The option -v for the grep command returns the contents of the file that do not match the given pattern, signified through "" quotation marks. In this example, "}" is the given pattern and so the contents of the Server.java file is returned without any closing brackets for the methods. 
+Explanation: The option -v for the grep command returns the contents of the file that do not match the given pattern, signified through "" quotation marks. In this example, "A Perk of Age: Free Legal Advice" is the given pattern and so the contents of the A_Perk_of_Age.txt file is returned without this line at the beginning. 
 
 **Example 2:**
 ```
