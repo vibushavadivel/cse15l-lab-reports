@@ -9,11 +9,14 @@
 **Bug Chosen:** `reversed` method in `ArrayExamples`
 
 **Failure Inducing Input:**
- ` @Test <br>
-  public void testReversed() { <br>
-       int[] input1 = {8,7,6,5}; <br>
+ ```
+ @Test <br>
+  public void testReversed() {
+       int[] input1 = {8,7,6,5}; 
        assertArrayEquals(new int[]{5,6,7,8}, ArrayExamples.reversed(input1));
-     } <\p>`
+  } 
+
+```
 
 **Non-failure Inducing Input:**
 `   @Test
