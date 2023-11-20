@@ -45,7 +45,7 @@ The `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` command 
 ### 6. Commit and push the resulting change to your Github account (you can pick any commit message!)
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/e74160ed-fcda-4a5a-9b3f-325933e19a1b)
 
-**Keys Pressed:** git add ., git commit -m "changed index1 to index2 in last loop of merge", git push origin main <br>
+**Keys Pressed:** git add  `.`, git commit -m "changed index1 to index2 in last loop of merge", git push origin main <br>
 
 I typed those three commands to commit and push my changes to my GitHub account. First I added made sure that I included all changes with `.` operator. 
 Then I committed those changes and added a message. Finally, I pushed them to the origin repository in main.
