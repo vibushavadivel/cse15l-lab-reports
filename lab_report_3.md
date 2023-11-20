@@ -49,7 +49,7 @@ static int[] reversed(int[] arr) {
     return newArray;
 }
 ```
-Description: The bug was in the third line of the body of the method. Instead of assigning the value of the input array, the buggy code assigned the values of the new initialized array filled with 0 values to the old array (newArray). It then returned the original input array (arr), now containing the 0 values of newArray. Instead I switched the assignement so that the empty new initialized array, newArray, would be assigned the values of the input array in reverse order (arr.length - 1 - i). I also changed it so that the method returned newArray, so that the return value was actually updated with the values in reverse order.
+**Description**: The bug was in the third line of the body of the method. Instead of assigning the value of the input array, the buggy code assigned the values of the new initialized array filled with 0 values to the old array (newArray). It then returned the original input array (arr), now containing the 0 values of newArray. Instead I switched the assignement so that the empty new initialized array, newArray, would be assigned the values of the input array in reverse order (arr.length - 1 - i). I also changed it so that the method returned newArray, so that the return value was actually updated with the values in reverse order.
 
 ## Part 2 - `grep`
 Consider the commands less, find, and grep. Choose one of them. Online, find 4 interesting command-line options or alternate ways to use the command you chose. To find information about the commands, a simple Web search like “find command-line options” will probably give decent results. There is also a built-in command on many systems called man (short for “manual”) that displays information about commands; you can use man grep, for example, to see a long listing of information about how grep works. Also consider asking ChatGPT!
@@ -58,25 +58,28 @@ For example, we saw the -name option for find in class. For each of those option
 
 That makes 8 total examples, all focused on a single command. There should be two examples each for four different command-line options. Many commands like these have pretty sophisticated behavior possible – it can take years to be exposed to and learn all of the possible tricks and inner workings.
 
-1. -v or --invert-match
-   a)
+### -v or --invert-match
+   1)
 Explanation: Invert the sense of matching, to select non-matching lines.
-   b)
+   2)
 Explanation:
-3. -i or --ignore-case
-   a)
+
+### -i or --ignore-case
+   3)
 Explanation: Ignore case distinctions in both the PATTERN and the input files.
-   b)
+   4)
 Explanation:
-5. -n or --line-number
-   a)
+
+### -n or --line-number
+   5)
 Explanation: Prefix each line of output with the line number of that line within the input file.
-   b)
+   6)
 Explanation:
-7.  -o, --only-matching
-   a)
+
+### -o, --only-matching
+   7)
 Explanation: Show only the part of a matching line that matches PATTERN
-   b)
+   8)
 Explanation:
 
 Sources: https://man7.org/linux/man-pages/man1/grep.1.html
