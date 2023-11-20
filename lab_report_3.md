@@ -9,18 +9,18 @@
 **Bug Chosen:** `reversed` method in `ArrayExamples`
 
 **Failure Inducing Input:**
- ``  @Test
+ `  @Test
      public void testReversed() {
        int[] input1 = {8,7,6,5};
        assertArrayEquals(new int[]{5,6,7,8}, ArrayExamples.reversed(input1));
-     }``
+     }`
 
 **Non-failure Inducing Input:**
-``   @Test
+`   @Test
      public void testReversed() {
        int[] input1 = {};
        assertArrayEquals(new int[]{}, ArrayExamples.reversed(input1));
-     }``
+     }`
 
 **Symptoms**
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/628c7ab5-e7b3-4f8c-9e4c-2eb01e9088e1)
