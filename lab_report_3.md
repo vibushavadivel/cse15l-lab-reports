@@ -10,26 +10,27 @@
 
 **Failure Inducing Input:**
  ```
- @Test <br>
-  public void testReversed() {
-       int[] input1 = {8,7,6,5}; 
-       assertArrayEquals(new int[]{5,6,7,8}, ArrayExamples.reversed(input1));
-  } 
-
+ @Test
+  public void testReversedFailure() {
+    int[] input1 = {8,7,6,5};
+    assertArrayEquals(new int[]{5,6,7,8}, ArrayExamples.reversed(input1));
+  }
 ```
 
 **Non-failure Inducing Input:**
-`   @Test
-     public void testReversed() {
-       int[] input1 = {};
-       assertArrayEquals(new int[]{}, ArrayExamples.reversed(input1));
-     }`
+```
+@Test
+ public void testReversed() {
+    int[] input1 = {};
+    assertArrayEquals(new int[]{}, ArrayExamples.reversed(input1));
+ }
+```
 
 **Symptoms**
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/628c7ab5-e7b3-4f8c-9e4c-2eb01e9088e1)
 
 **The Buggy Code Before:**
-
+```
    static int[] reversed(int[] arr) {
        int[] newArray = new int[arr.length];
        for(int i = 0; i < arr.length; i += 1) {
@@ -37,9 +38,9 @@
        }
        return arr;
      }
-
+```
 **The Buggy Code After (Fixed):**
-
+```
    static int[] reversed(int[] arr) {
        int[] newArray = new int[arr.length];
        for(int i = 0; i < arr.length; i += 1) {
@@ -47,7 +48,9 @@
        }
        return newArray;
      }
-     
+ ```
+Description: 
+
 ## Part 2 - `grep`
 Consider the commands less, find, and grep. Choose one of them. Online, find 4 interesting command-line options or alternate ways to use the command you chose. To find information about the commands, a simple Web search like “find command-line options” will probably give decent results. There is also a built-in command on many systems called man (short for “manual”) that displays information about commands; you can use man grep, for example, to see a long listing of information about how grep works. Also consider asking ChatGPT!
 
