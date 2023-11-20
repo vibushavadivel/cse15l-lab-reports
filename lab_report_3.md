@@ -1,4 +1,4 @@
-# Lab Report 2
+# Lab Report 3
 ---
 #### Name: Vibusha Vadivel 
 #### PID: A17825728 
@@ -6,15 +6,45 @@
 ---
 
 ## Part 1
-A failure-inducing input for the buggy program, as a JUnit test and any associated code (write it as a code block in Markdown)
-An input that doesn’t induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown)
-The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above)
-The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
-Failure inducing input - 
-Input that doesn’t induce a failure - 
+**Bug Chosen:** `reversed` method in `ArrayExamples`
 
+**Failure Inducing Input:**
+   @Test
+     public void testReversed() {
+       int[] input1 = {8,7,6,5};
+       assertArrayEquals(new int[]{5,6,7,8}, ArrayExamples.reversed(input1));
+     }
 
+**Non-failure Inducing Input:**
+   @Test
+     public void testReversed() {
+       int[] input1 = {};
+       assertArrayEquals(new int[]{}, ArrayExamples.reversed(input1));
+     }
 
+**Symptoms**
+![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/628c7ab5-e7b3-4f8c-9e4c-2eb01e9088e1)
+
+**The Buggy Code Before:**
+
+   static int[] reversed(int[] arr) {
+       int[] newArray = new int[arr.length];
+       for(int i = 0; i < arr.length; i += 1) {
+         arr[i] = newArray[arr.length - i - 1];
+       }
+       return arr;
+     }
+
+**The Buggy Code After (Fixed):**
+
+   static int[] reversed(int[] arr) {
+       int[] newArray = new int[arr.length];
+       for(int i = 0; i < arr.length; i += 1) {
+         newArray[i] = arr[arr.length - i - 1];
+       }
+       return newArray;
+     }
+     
 ## Part 2 - `grep`
 Consider the commands less, find, and grep. Choose one of them. Online, find 4 interesting command-line options or alternate ways to use the command you chose. To find information about the commands, a simple Web search like “find command-line options” will probably give decent results. There is also a built-in command on many systems called man (short for “manual”) that displays information about commands; you can use man grep, for example, to see a long listing of information about how grep works. Also consider asking ChatGPT!
 
