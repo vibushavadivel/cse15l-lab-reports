@@ -30,7 +30,7 @@ Original Code: </br>
 
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/d5470e01-9a2e-4239-89bb-6c063dbaace5)
 
-**[TA]:** Hm! Did you look at the argument you are passing in for the add command? Also make sure your inital while loop is not ending early and you are being consistent with how you are accessing and iterating through your elements. 
+**[TA]:** Hm! Did you look at the argument you are passing in for the `add` command? Also make sure your inital while loop is not ending early and you are being consistent with how you are accessing and iterating through your elements. 
 
 **[Student]:** Oh, I see. I didn't realize I used index1 when adding elements to List2. Just changed the argument `index1-1` to `index2`. It works as expected. Thank you for all your help! :)
 
@@ -121,11 +121,12 @@ public class TestListExamples {
 
       ListExamples test = new ListExamples();
       List<String> list1 = Arrays.asList("Apple", "Banana", "Orange");
-      List<String> list2 = Arrays.asList("Grape", "Papaya", "Pear", "Strawberry");
+      List<String> list2 = Arrays.asList("Grape", "Strawberry", "Papaya", "Pear");
 
-      List<String> expected = (Arrays.asList("Apple", "Banana", "Orange", "Grape", "Strawberry", "Papaya", "Pear"));
       List<String> result = test.merge(list1, list2);
       System.out.println(result.toString());
+
+      List<String> expected = (Arrays.asList("Apple", "Banana", "Orange", "Grape", "Strawberry", "Papaya", "Pear"));
       assertArrayEquals(expected.toArray(), result.toArray());
 
   }
