@@ -21,9 +21,9 @@ I feel like it has something to do in the second half of my merge function where
 
 ## Implementing TA's feedback
 Original Code: </br>
-![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/e480ff81-684a-40ea-b0fb-829fcbc61b2e)
+![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/fc78e7d2-3af9-495d-95a4-f1dd24608856)
 
-**[Student]:** Thank you for this suggestion! I realized that I was actually adding the value from List1 under the List2 while loop. This is what was causing the repeated `orange` value. However, for some reason, the last element of my first list and first element of the second list are switched. Not sure what the big is in this, because all the elements are present, they just are not in the correct/expected order. </br>
+**[Student]:** Thank you for this suggestion! I realized that I was actually adding the value from List1 under the List2 while loop. This is what was causing the repeated `orange` value. However, now the third element of the second list keeps repeating. Not sure what the error is...
 
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/d5470e01-9a2e-4239-89bb-6c063dbaace5)
 
