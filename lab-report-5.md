@@ -14,13 +14,17 @@ I feel like it has something to do in the second half of my merge function where
 
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/d6e0658e-ea01-4a9e-9491-2aeb3574a409)
 
-A response from a TA asking a leading question or suggesting a command to try (To be clear, you are mimicking a TA here.)
+## Response from a TA
 
-Make sure you are have the right list variable name when you add it to your final merged list 
+Hi! It seems like when you are adding a value to your final merged list, you are adding from the wrong list. Since the number of final elements matches with the expected list, perhaps check the variable name you are using when you add it to your final merged list!
 
-Another screenshot/terminal output showing what information the student got from trying that, and a clear description of what the bug is.
+
+## Implementing TA's feedback
+Original Code: </br>
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/e480ff81-684a-40ea-b0fb-829fcbc61b2e)
-![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/057375d1-cd44-4e58-b856-87476a588a14)
+
+Thank you for this suggestion! I realized that I was actually adding the value from List1 under the List2 while loop. This is what was causing the repeated `orange` value. However, for some reason, the last element of my first list and first element of the second list are switched. Not sure what the big is in this, because all the elements are present, they just are not in the correct/expected order.
+![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/3365667f-8c78-4ab5-897c-4544bba74f2a)
 
 
 At the end, all the information needed about the setup including:
