@@ -34,15 +34,115 @@ Thank you for this suggestion! I realized that I was actually adding the value f
 
 ### Contents of each file
 **ListExamples.java </br>**
-![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/51298f7b-2486-4266-9254-890680d3e44b)
-![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/1291aa57-5800-4094-9597-55e34947fece)
+```
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+interface StringChecker { boolean checkString(String s); }
+
+class ListExamples {
+
+  // Returns a new list that has all the elements of the input list for which
+  // the StringChecker returns true, and not the elements that return false, in
+  // the same order they appeared in the input list;
+  static List<String> filter(List<String> list, StringChecker sc) {
+    List<String> result = new ArrayList<>();
+    for(String s: list) {
+      if(sc.checkString(s)) {
+        result.add(s);
+      }
+    }
+    return result;
+  }
+
+
+  // Takes two sorted list of strings (so "a" appears before "b" and so on),
+  // and return a new list that has all the strings in both list in sorted order.
+  static List<String> merge(List<String> list1, List<String> list2) {
+    List<String> result = new ArrayList<>();
+    int index1 = 0, index2 = 0;
+    while(index1 < list1.size() && index2 < list2.size()) {
+      if(list1.get(index1).compareTo(list2.get(index2)) < 0) {
+        result.add(list1.get(index1));
+        index1 += 1;
+      }
+      else {
+        result.add(list2.get(index2));
+        index2 += 1;
+      }
+    }
+    while(index1 < list1.size()) {
+      result.add(list1.get(index1));
+      index1 += 1;
+    }
+    while(index2 < list2.size()) {
+      result.add(list1.get(index1-1));
+      index2 += 1;
+    }
+    return result;
+  }
+
+  public static void main(String[] args) {
+      ListExamples test = new ListExamples();
+      List<String> list1 = new ArrayList<>(Arrays.asList("Apple", "Banana", "Orange"));
+      List<String> list2 = new ArrayList<>(Arrays.asList("Grape", "Strawberry", "Papaya", "Pear"));
+
+      List<String> result = test.merge(list1, list2);
+      System.out.println(result.toString());
+
+  }
+
+}
+```
 
 **TestListExamples.java </br>**
-![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/fff12f4c-dfef-4ef2-bb72-bc917db282a6)
+```
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.util.Arrays;
+import java.util.List;
+
+class IsMoon implements StringChecker {
+  public boolean checkString(String s) {
+    return s.equalsIgnoreCase("moon");
+  }
+}
+
+public class TestListExamples {
+  
+  public void testMergeRightEnd() {
+    List<String> left = Arrays.asList("a", "b", "c");
+    List<String> right = Arrays.asList("a", "d");
+    List<String> merged = ListExamples.merge(left, right);
+    List<String> expected = Arrays.asList("a", "a", "b", "c", "d");
+    assertEquals(expected, merged);
+  }
+
+  @Test
+  public void testMerge() {
+
+      ListExamples test = new ListExamples();
+      List<String> list1 = Arrays.asList("Apple", "Banana", "Orange");
+      List<String> list2 = Arrays.asList("Grape", "Strawberry", "Papaya", "Pear");
+
+      List<String> expected = (Arrays.asList("Apple", "Banana", "Orange", "Grape", "Strawberry", "Papaya", "Pear"));
+      List<String> result = test.merge(list1, list2);
+      System.out.println(result.toString());
+      assertArrayEquals(expected.toArray(), result.toArray());
+
+  }
+}
+```
 
 **bash.sh** </br>
-![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/3cfa393a-ad8b-442a-8e1e-8172c2538bb4)
-
+```
+javac -cp ".:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar" *.java
+java -cp ".:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore TestListExamples > output.txt
+echo "Tests ran sucessfully. The got the following output:"
+grep -h "Failed :((" output.txt
+grep -h "Passed!! :))" output.txt
+```
 
 ### Command line (or lines)
 `bash.sh` 
