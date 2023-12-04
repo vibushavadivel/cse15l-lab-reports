@@ -50,3 +50,5 @@ Thank you for this suggestion! I realized that I was actually adding the value f
 ### Fixing the bug
 1. Change Line 43: ` result.add(list1.get(index1-1));` --> ` result.add(list2.get(index2));`
 
+## Reflection: 
+I really enjoyed getting famiilar with Vim, because it is efficient and convenient. I don't need an IDE to view my files, and I do not need to have multiple windows to edit my code. Also being able to control everything from my keyboard eliminates time that a mousepad would take. Since it is lightweight, it starts quickly and can handle large files. Finally, it can run on every operating system and doesn't need a bunch of configurations, editors, extensions to run and edit different files written in different languages. 
