@@ -6,7 +6,7 @@
 ---
 
 ## Original Post 
-Hi! I am having trouble with the ListExamples `merge` function. For some reason, when I try to merge two lists, instead of getting a merged list, I am getting a list unorganized with the last element of the first list continuously repeating. 
+**[Student]:** Hi! I am having trouble with the ListExamples `merge` function. For some reason, when I try to merge two lists, instead of getting a merged list, I am getting a list unorganized with the last element of the first list continuously repeating. 
 </br> </br>
 I feel like it has something to do in the second half of my merge function where I add the elements after the index of one of the lists is equal to or exceeds the length of the other list's size. If someone could help me debug this, that would be very helpful, thank you!
 
@@ -16,16 +16,22 @@ I feel like it has something to do in the second half of my merge function where
 
 ## Response from a TA
 
-Hi! It seems like when you are adding a value to your final merged list, you are adding from the wrong list. Since the number of final elements matches with the expected list, perhaps check the variable name you are using when you add it to your final merged list!
+**[TA]:** Hi! It seems like when you are adding a value to your final merged list, you are adding from the wrong list. Since the number of final elements matches with the expected list, perhaps check the variable name you are using when you add it to your final merged list!
 
 
 ## Implementing TA's feedback
 Original Code: </br>
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/e480ff81-684a-40ea-b0fb-829fcbc61b2e)
 
-Thank you for this suggestion! I realized that I was actually adding the value from List1 under the List2 while loop. This is what was causing the repeated `orange` value. However, for some reason, the last element of my first list and first element of the second list are switched. Not sure what the big is in this, because all the elements are present, they just are not in the correct/expected order. </br>
+**[Student]:** Thank you for this suggestion! I realized that I was actually adding the value from List1 under the List2 while loop. This is what was causing the repeated `orange` value. However, for some reason, the last element of my first list and first element of the second list are switched. Not sure what the big is in this, because all the elements are present, they just are not in the correct/expected order. </br>
 
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/d5470e01-9a2e-4239-89bb-6c063dbaace5)
+
+**[TA]:** Hm! Did you look at the argument you are passing in for the add command? Also make sure your inital while loop is not ending early. Make sure you are consistent with how you are accessing and iterating through your elements. 
+
+**[Student]:** Oh, I see. I didn't realize I used index1 when adding elements to List2. Just changed the argument `index1-1` to `index2`. I also changed the if condition so that it is or instead of and, so that this way it exits the loop and accesses the next element in order. It works as expected. Thank you for all your help! :)
+
+
 
 ## Information
 
