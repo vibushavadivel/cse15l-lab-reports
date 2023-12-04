@@ -27,7 +27,7 @@ Thank you for this suggestion! I realized that I was actually adding the value f
 
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/d5470e01-9a2e-4239-89bb-6c063dbaace5)
 
-## Inforamtion
+## Information
 
 ### File & Directory Structure 
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/cb69b259-d1db-4623-ae83-5ed94c298e49)
