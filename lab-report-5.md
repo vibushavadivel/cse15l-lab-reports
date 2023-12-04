@@ -23,24 +23,30 @@ Hi! It seems like when you are adding a value to your final merged list, you are
 Original Code: </br>
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/e480ff81-684a-40ea-b0fb-829fcbc61b2e)
 
-Thank you for this suggestion! I realized that I was actually adding the value from List1 under the List2 while loop. This is what was causing the repeated `orange` value. However, for some reason, the last element of my first list and first element of the second list are switched. Not sure what the big is in this, because all the elements are present, they just are not in the correct/expected order.
-![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/3365667f-8c78-4ab5-897c-4544bba74f2a)
+Thank you for this suggestion! I realized that I was actually adding the value from List1 under the List2 while loop. This is what was causing the repeated `orange` value. However, for some reason, the last element of my first list and first element of the second list are switched. Not sure what the big is in this, because all the elements are present, they just are not in the correct/expected order. </br>
+
+![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/d5470e01-9a2e-4239-89bb-6c063dbaace5)
+
+## Inforamtion
+
+### File & Directory Structure 
+![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/cb69b259-d1db-4623-ae83-5ed94c298e49)
 
 
-At the end, all the information needed about the setup including:
-The file & directory structure needed
-lib 
+### Contents of each file
+**ListExamples.java </br>**
+![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/51298f7b-2486-4266-9254-890680d3e44b)
+![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/1291aa57-5800-4094-9597-55e34947fece)
 
-Arraylists file
-bash.sh 
+**TestListExamples.java </br>**
+![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/fff12f4c-dfef-4ef2-bb72-bc917db282a6)
 
-The contents of each file before fixing the bug
+**bash.sh** </br>
+![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/3cfa393a-ad8b-442a-8e1e-8172c2538bb4)
 
 
 The full command line (or lines) you ran to trigger the bug
-bash.sh 
+`bash.sh` 
 
 A description of what to edit to fix the bug
 
-
-You should actually set up and run the scenario from your screenshots. It should involve at least a Java file and a bash script. Describing the bug should involve reading some output at the terminal resulting from running one or more commands. Design an error that produces more interesting output than a single message about a syntax or unbound identifier error – showcase some interesting wrong behavior! Feel free to set this up by cloning and breaking some existing code like the grading script or code from class, or by designing something of your own from scratch, etc.
