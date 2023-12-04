@@ -29,9 +29,7 @@ Original Code: </br>
 
 **[TA]:** Hm! Did you look at the argument you are passing in for the add command? Also make sure your inital while loop is not ending early and you are being consistent with how you are accessing and iterating through your elements. 
 
-**[Student]:** Oh, I see. I didn't realize I used index1 when adding elements to List2. Just changed the argument `index1-1` to `index2`. I also changed the if condition so that it is or instead of and, so that this way it exits the loop and accesses the next element in order. It works as expected. Thank you for all your help! :)
-
-
+**[Student]:** Oh, I see. I didn't realize I used index1 when adding elements to List2. Just changed the argument `index1-1` to `index2`. It works as expected. Thank you for all your help! :)
 
 ## Information
 
@@ -89,16 +87,6 @@ class ListExamples {
     return result;
   }
 
-  public static void main(String[] args) {
-      ListExamples test = new ListExamples();
-      List<String> list1 = new ArrayList<>(Arrays.asList("Apple", "Banana", "Orange"));
-      List<String> list2 = new ArrayList<>(Arrays.asList("Grape", "Strawberry", "Papaya", "Pear"));
-
-      List<String> result = test.merge(list1, list2);
-      System.out.println(result.toString());
-
-  }
-
 }
 ```
 
@@ -130,7 +118,7 @@ public class TestListExamples {
 
       ListExamples test = new ListExamples();
       List<String> list1 = Arrays.asList("Apple", "Banana", "Orange");
-      List<String> list2 = Arrays.asList("Grape", "Strawberry", "Papaya", "Pear");
+      List<String> list2 = Arrays.asList("Grape", "Papaya", "Pear", "Strawberry");
 
       List<String> expected = (Arrays.asList("Apple", "Banana", "Orange", "Grape", "Strawberry", "Papaya", "Pear"));
       List<String> result = test.merge(list1, list2);
