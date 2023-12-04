@@ -1,8 +1,13 @@
-###The original post 
+# Lab Report 4
+---
+#### Name: Vibusha Vadivel 
+#### PID: A17825728 
+#### Email: vvadivel@ucsd.edu
+---
 
-from a student with a screenshot showing a symptom and a description of a guess at the bug/some sense of what the failure-inducing input is. (Don’t actually make the post! Just write the content that would go in such a post)
+## Original Post 
 Hi! I am having trouble with the ListExamples `merge` function. For some reason, when I try to merge two lists, instead of getting a merged list, I am getting a list unorganized with the last element of the first list continuously repeating. 
-</br>
+</br> </br>
 I feel like it has something to do in the second half of my merge function where I add the elements after the index of one of the lists is equal to or exceeds the length of the other list's size. If someone could help me debug this, that would be very helpful, thank you!
 
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/86928e05-a218-499b-8534-078a5406e0e0)
