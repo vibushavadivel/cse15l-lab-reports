@@ -27,7 +27,7 @@ Original Code: </br>
 
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/d5470e01-9a2e-4239-89bb-6c063dbaace5)
 
-**[TA]:** Hm! Did you look at the argument you are passing in for the add command? Also make sure your inital while loop is not ending early. Make sure you are consistent with how you are accessing and iterating through your elements. 
+**[TA]:** Hm! Did you look at the argument you are passing in for the add command? Also make sure your inital while loop is not ending early and you are being consistent with how you are accessing and iterating through your elements. 
 
 **[Student]:** Oh, I see. I didn't realize I used index1 when adding elements to List2. Just changed the argument `index1-1` to `index2`. I also changed the if condition so that it is or instead of and, so that this way it exits the loop and accesses the next element in order. It works as expected. Thank you for all your help! :)
 
