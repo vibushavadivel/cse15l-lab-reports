@@ -32,7 +32,6 @@ Thank you for this suggestion! I realized that I was actually adding the value f
 ### File & Directory Structure 
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/cb69b259-d1db-4623-ae83-5ed94c298e49)
 
-
 ### Contents of each file
 **ListExamples.java </br>**
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/51298f7b-2486-4266-9254-890680d3e44b)
@@ -45,8 +44,9 @@ Thank you for this suggestion! I realized that I was actually adding the value f
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/3cfa393a-ad8b-442a-8e1e-8172c2538bb4)
 
 
-The full command line (or lines) you ran to trigger the bug
+### Command line (or lines)
 `bash.sh` 
 
-A description of what to edit to fix the bug
+### Fixing the bug
+1. Change Line 43: ` result.add(list1.get(index1-1));` --> ` result.add(list2.get(index2));`
 
