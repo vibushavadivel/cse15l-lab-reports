@@ -10,7 +10,7 @@
 </br> </br>
 I feel like it has something to do in the second half of my merge function where I add the elements after the index of one of the lists is equal to or exceeds the length of the other list's size. If someone could help me debug this, that would be very helpful, thank you!
 
-![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/86928e05-a218-499b-8534-078a5406e0e0)
+![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/5b632675-20f5-46aa-9362-937ce6e33114)
 
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/d6e0658e-ea01-4a9e-9491-2aeb3574a409)
 
