@@ -138,7 +138,8 @@ grep -h "Passed!! :))" output.txt
 ```
 
 ### Command line (or lines)
-`bash.sh` 
+1. `cd Vibusha 2023/CSE 15L/lab-report-9`
+2. `bash.sh` 
 
 ### Fixing the bug
 1. Change Line 43: ` result.add(list1.get(index1-1));` --> ` result.add(list2.get(index2));`
