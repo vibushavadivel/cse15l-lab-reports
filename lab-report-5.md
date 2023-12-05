@@ -35,7 +35,7 @@
 ![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/cb69b259-d1db-4623-ae83-5ed94c298e49)
 
 ### Contents of each file
-**ListExamples.java </br>**
+**ListExamples.java**
 ```
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -88,7 +88,7 @@ class ListExamples {
 }
 ```
 
-**TestListExamples.java </br>**
+**TestListExamples.java**
 ```
 import static org.junit.Assert.*;
 import org.junit.*;
@@ -128,7 +128,7 @@ public class TestListExamples {
 }
 ```
 
-**bash.sh** </br>
+**bash.sh**
 ```
 javac -cp ".:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar" *.java
 java -cp ".:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore TestListExamples > output.txt
