@@ -21,12 +21,9 @@
 
 
 ## Implementing TA's feedback
-Original Code: </br>
-![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/fc78e7d2-3af9-495d-95a4-f1dd24608856)
-
 **[Student]:** Thank you for this suggestion! I realized that I was actually adding the value from List1 under the List2 while loop. This is what was causing the repeated `orange` value. However, now the third element of the second list keeps repeating. Not sure what the error is...
 
-![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/d5470e01-9a2e-4239-89bb-6c063dbaace5)
+![image](https://github.com/vibushavadivel/cse15l-lab-reports/assets/102670153/fc78e7d2-3af9-495d-95a4-f1dd24608856)
 
 **[TA]:** Hm! Did you look at the argument you are passing in for the `add` command? Also make sure your inital while loop is not ending early and you are being consistent with how you are accessing and iterating through your elements. 
 
